@@ -27,10 +27,6 @@ if (filter) {
   });
 }
 
-const copyValues = {
-  email: 'xinyu.wang@sydney.edu.au',
-  bio: 'Xinyu Wang is a Ph.D. researcher in Transportation Engineering at the University of Sydney, working with Dr. Andres Fielbaum and Prof. David Levinson in TransportLab. Xinyu’s research combines AI, operations research, and city-scale simulation to improve on-demand mobility and sustainable transport.'
-};
 let toastTimer;
 function showToast(message) {
   const toast = document.querySelector('.toast');
@@ -56,10 +52,19 @@ async function copyText(value) {
   if (previousFocus instanceof HTMLElement) previousFocus.focus({ preventScroll: true });
   return copied;
 }
-document.querySelectorAll('[data-copy]').forEach(button => {
-  button.hidden = false;
-  button.addEventListener('click', async () => {
-    const copied = await copyText(copyValues[button.dataset.copy]);
-    showToast(copied ? (button.dataset.copy === 'email' ? 'Email address copied.' : 'Short bio copied.') : 'Could not copy. Please select and copy the text directly.');
+// Keep the mailto link as a no-JavaScript fallback; a normal click copies it.
+document.querySelectorAll('[data-copy-email]').forEach(link => {
+  link.setAttribute('role', 'button');
+  link.addEventListener('keydown', event => {
+    if (event.key === ' ') {
+      event.preventDefault();
+      link.click();
+    }
+  });
+  link.addEventListener('click', async event => {
+    event.preventDefault();
+    const email = link.getAttribute('href').replace(/^mailto:/, '');
+    const copied = await copyText(email);
+    showToast(copied ? 'Email address copied.' : 'Could not copy. Please select and copy the email address directly.');
   });
 });

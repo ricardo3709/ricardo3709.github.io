@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="520" viewBox="0 0 440 520" role="img" aria-label="Profile photo placeholder">
+  <rect width="440" height="520" fill="#fcf8f3"/>
+  <rect x="26" y="26" width="388" height="468" rx="8" fill="none" stroke="#d9c9b9" stroke-dasharray="6 7"/>
+  <text x="220" y="262" text-anchor="middle" font-family="Georgia,serif" font-size="72" fill="#a8876d">XW</text>
+  <text x="220" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" letter-spacing="3" fill="#89786b">PROFILE PHOTO</text>
+</svg>

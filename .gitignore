@@ -1,0 +1,6 @@
+/papers/
+.DS_Store
+.history/
+dist/
+__pycache__/
+xinyu_wang_daad_tabular_cv.pdf

@@ -1,19 +1,31 @@
-# 🧑‍🚀 Personal Homepage Template [[Preview](https://w-r-s.github.io/academic-homepage-template/)]
+# Xinyu Wang — Academic Homepage
 
-This repository is a reusable academic and personal homepage template. The visible profile belongs to a fictional person; names, affiliations, projects, publications, awards, and contact details are sample content only.
+Personal website for Xinyu Wang, a Ph.D. researcher in Transportation Engineering at the University of Sydney. Adapted from [academic-homepage-template](https://github.com/w-r-s/academic-homepage-template).
 
-Start locally with:
+The site is plain HTML, CSS, and JavaScript with no package installation required. It includes a research biography, three published journal articles, education, research and industry experience, teaching, selected presentations, and technical expertise.
+
+## Preview
+
+Build the public files and serve them locally:
 
 ```bash
-python3 -m http.server 8080 --bind 127.0.0.1
+python3 scripts/build.py
+python3 -m http.server 8080 --bind 127.0.0.1 --directory dist
 ```
 
-Before publishing, replace the sample identity and links in `index.html` and the placeholder assets in `images/template/`.
+Then open http://127.0.0.1:8080. The site also works by opening `index.html` directly. Publication filters and copy controls progressively enhance the page; all publications remain visible without JavaScript.
 
-This homepage benefits from many projects and tools, including but not limited to:
+## Content and publication policy
 
-- Claude Code with Opus 4.6
-- CodeX with GPT-5.5
-- Audio-Interaction: https://xzf-thu.github.io/Audio-Interaction/
+- Biography and experience are grounded in the supplied September 2026 CV.
+- Only the three articles listed as peer-reviewed journal publications are displayed. Under-review manuscripts and their findings are omitted.
+- Publication titles, authors, journals, article numbers, and DOI links were checked against the published PDFs in `papers/published/`.
+- The original CV is intentionally not linked or included in the public build, because it includes under-review manuscripts. Personal phone details are also omitted.
+- Publication thumbnails in `images/publications/` are figure crops from the corresponding open-access articles: RL architecture (Fig. 3), walking study networks (Fig. 5), and Circular Quay berths (Fig. 1). Attribution is displayed with each figure and the related article is linked beside it.
+- The example paper illustrations and profile assets from the original template are not used or included in the public build. The template's landscape footer is retained.
 
-> Keep the layout, customize the content, and make it yours.
+## Editing and publishing
+
+Edit `index.html` for content, `stylesheet.css` for presentation, and `script.js` for publication filters and clipboard actions. Update the explicit public-file list in `scripts/build.py` when adding assets. Rebuild after changes.
+
+Deploy the contents of `dist/`, not the repository root, to a static host. This keeps the original CV, unpublished manuscripts, local edit history, and research source files out of the published website. Sites configuration lives in `.openai/hosting.json`.

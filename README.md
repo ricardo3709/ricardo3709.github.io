@@ -4,7 +4,7 @@
 
 A static personal website for Xinyu Wang, a Ph.D. researcher in Transportation Engineering at the University of Sydney. Adapted from [academic-homepage-template](https://github.com/w-r-s/academic-homepage-template).
 
-The academic homepage includes a biography with a profile-photo placeholder, a postdoc-availability note, News, Google Scholar link, published articles, education, experience, teaching, and talks. The design is a light, Apple-inspired system: system fonts (SF Pro on Apple devices), white and light-gray bands, pill buttons, and a translucent sticky header, with no decorative animation. Clicking the email address copies it. The **Other than academic** page provides space for personal interests and photographs, with placeholders until photos are added.
+The academic homepage includes a biography with a profile-photo placeholder, a postdoc-availability note, News, Google Scholar link, published articles, education, experience, teaching, and talks. The design is a light, Apple-inspired system: system fonts (SF Pro on Apple devices), white and light-gray bands, pill buttons, and a translucent sticky header, with no decorative animation. Clicking the email address copies it. The **Other than academic** page is a photo journal of life outside research.
 
 ## Preview locally
 
@@ -18,11 +18,11 @@ Open http://127.0.0.1:8080. There are no package dependencies. The pages also wo
 ## Add your photos
 
 - **Profile photo:** save an image as `images/profile.jpg` (PNG, WebP, AVIF, and other common image formats are also supported). In `index.html`, replace `images/profile-placeholder.svg` with its path and set an appropriate `alt` description. Keep the `profile-photo` class; the homepage uses a portrait crop on larger screens and a square crop on phones, so keep your face in the upper-middle of the image.
-- **Personal photos:** save images under `images/personal/`. In `other-than-academic.html`, replace a `photo-placeholder` div with an `<img>` and edit its caption. For example:
+- **Personal photos:** save images under `images/personal/`. In `other-than-academic.html`, copy a `photo-slot` figure in the photo journal and edit its image, `alt` text, size, and caption. Portrait photos are cropped to 3:4; add `photo-wide` to a landscape photo so it spans two columns. For example:
 
 ```html
 <figure class="photo-slot">
-  <img src="images/personal/my-photo.jpg" alt="A description of the photograph" width="1200" height="900" loading="lazy">
+  <img src="images/personal/my-photo.jpg" alt="A description of the photograph" width="1080" height="1440" loading="lazy">
   <figcaption>Your caption here.</figcaption>
 </figure>
 ```

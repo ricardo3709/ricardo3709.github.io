@@ -18,7 +18,7 @@ Open http://127.0.0.1:8080. There are no package dependencies. The pages also wo
 ## Add your photos
 
 - **Profile photo:** save an image as `images/profile.jpg` (PNG, WebP, AVIF, and other common image formats are also supported). In `index.html`, replace `images/profile-placeholder.svg` with its path and set an appropriate `alt` description. Keep the `profile-photo` class; the homepage uses a portrait crop on larger screens and a square crop on phones, so keep your face in the upper-middle of the image.
-- **Personal photos:** save images under `images/personal/`. In `other-than-academic.html`, copy a `photo-slot` figure in the photo journal and edit its image, `alt` text, size, and caption. Portrait photos are cropped to 3:4; add `photo-wide` to a landscape photo so it spans two columns. For example:
+- **Personal photos:** save images under `images/personal/`. In `other-than-academic.html`, copy a `photo-slot` figure in the photo journal and edit its image, `alt` text, size, and caption. Portrait photos are cropped to 3:4; add `photo-wide` to a landscape photo so it fills a whole row. Keep the number of portrait photos a multiple of three so the rows stay complete. For example:
 
 ```html
 <figure class="photo-slot">

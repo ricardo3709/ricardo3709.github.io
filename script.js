@@ -1,5 +1,25 @@
 'use strict';
 
+// Small-screen menu: the links stay visible as a wrapped row when JavaScript is unavailable.
+const header = document.querySelector('.site-header');
+const navToggle = document.querySelector('.nav-toggle');
+if (header && navToggle) {
+  const setMenu = open => {
+    header.classList.toggle('nav-open', open);
+    document.documentElement.classList.toggle('menu-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  navToggle.addEventListener('click', () => setMenu(!header.classList.contains('nav-open')));
+  header.querySelectorAll('.site-nav a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && header.classList.contains('nav-open')) {
+      setMenu(false);
+      navToggle.focus();
+    }
+  });
+}
+
 // The complete publication list remains readable when JavaScript is unavailable.
 const filter = document.querySelector('.tag-filter');
 const publications = [...document.querySelectorAll('.publication')];
@@ -30,6 +50,7 @@ if (filter) {
 let toastTimer;
 function showToast(message) {
   const toast = document.querySelector('.toast');
+  if (!toast) return;
   clearTimeout(toastTimer);
   toast.textContent = message;
   toast.classList.add('show');

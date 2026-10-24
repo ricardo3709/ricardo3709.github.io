@@ -4,164 +4,220 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
   <title>Xinyu Wang | Transportation Research</title>
   <meta name="author" content="Xinyu Wang">
-  <meta name="description" content="Xinyu Wang is a Ph.D. researcher at the University of Sydney working on AI and operations research for urban mobility, ridepooling, and electric transport.">
+  <meta name="description" content="Xinyu Wang is a Ph.D. researcher at the University of Sydney working on AI and operations research for urban mobility, ridepooling, and electric transport, and is looking for postdoctoral positions from 2027.">
   <meta property="og:title" content="Xinyu Wang | Transportation Research">
-  <meta property="og:description" content="AI and operations research for urban mobility. Research, publications, and academic experience at the University of Sydney.">
+  <meta property="og:description" content="AI and operations research for urban mobility. Ph.D. researcher at the University of Sydney, looking for postdoctoral positions from 2027.">
   <meta property="og:type" content="website">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="stylesheet.css">
+  <script>document.documentElement.classList.add('js');</script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="wordmark" href="#about" aria-label="Xinyu Wang, home">XW<span>.</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#publications">Publications</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#talks">Talks</a>
-      <a href="other-than-academic.html">Other than academic</a>
-      <a href="mailto:xinyu.wang@sydney.edu.au">Contact <span aria-hidden="true">↗</span></a>
-    </nav>
+    <div class="nav-bar container">
+      <a class="wordmark" href="#top">Xinyu Wang</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="icon-menu" aria-hidden="true" viewBox="0 0 18 18"><path d="M2 6h14M2 12h14"/></svg>
+        <svg class="icon-close" aria-hidden="true" viewBox="0 0 18 18"><path d="m4 4 10 10M14 4 4 14"/></svg>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#talks">Talks</a>
+        <a href="other-than-academic.html">Other than academic</a>
+        <a class="nav-cta" href="mailto:xinyu.wang@sydney.edu.au">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="main" class="page-container home-layout">
-    <div class="academic-content">
-    <section id="about" class="about page-section" aria-labelledby="name">
-      <div class="bio">
-        <p class="eyebrow">TRANSPORTATION · AI · OPERATIONS RESEARCH</p>
-        <h1 id="name">Xinyu Wang<span class="name-dot">.</span></h1>
-        <p class="role">Ph.D. researcher at the University of Sydney</p>
-        <p>I study how <strong>AI and operations research can improve urban mobility</strong>. My work combines reinforcement learning, network optimisation, and city-scale simulation to design more efficient, equitable, and resilient transport systems.</p>
-        <p>I am part of TransportLab in the School of Civil Engineering, supervised by <strong>Dr. Andres Fielbaum</strong> and <strong>Prof. David Levinson</strong>. My research draws on real-world demand and networks from Manhattan, Utrecht, and Canberra.</p>
-        <div class="contact-links">
-          <a class="email-link" href="mailto:xinyu.wang@sydney.edu.au" data-copy-email title="Click to copy email address" aria-label="Copy email address: xinyu.wang@sydney.edu.au"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>xinyu.wang@sydney.edu.au</a>
-          <a class="scholar-link" href="https://scholar.google.com/citations?user=goO48UQAAAAJ" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v5c4 3 8 3 12 0v-5M22 9v7"/></svg>Google Scholar <span aria-hidden="true">↗</span></a>
+  <main id="main">
+    <section id="top" class="hero" aria-labelledby="name">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <a class="status-pill" href="#postdoc"><span class="status-dot" aria-hidden="true"></span>Open to postdoc positions · 2027<span class="chevron" aria-hidden="true">›</span></a>
+          <h1 id="name">Xinyu Wang</h1>
+          <p class="hero-role">Ph.D. researcher in Transportation Engineering at the University of Sydney</p>
+          <p class="hero-lead">I study how AI and operations research can improve urban mobility. <span>Most days, that means helping shared rides think a few steps ahead.</span></p>
+          <div class="bio">
+            <p>My work combines reinforcement learning, network optimization, and city-scale simulation to answer questions such as how shared rides should be matched and routed, where passengers should be picked up and dropped off, and how to balance efficiency with fairness.</p>
+            <p>I’m part of TransportLab in the School of Civil Engineering, supervised by <strong>Dr. Andres Fielbaum</strong> and <strong>Prof. David Levinson</strong>. My research draws on real-world demand and networks from Manhattan, Utrecht, and Canberra.</p>
+          </div>
+          <ul class="focus-list" aria-label="Research focus">
+            <li>On-demand ridepooling</li>
+            <li>Reinforcement learning</li>
+            <li>Network optimization</li>
+            <li>Sustainable transport</li>
+          </ul>
+          <div class="contact-links">
+            <a class="email-link" href="mailto:xinyu.wang@sydney.edu.au" data-copy-email title="Click to copy email address" aria-label="Copy email address: xinyu.wang@sydney.edu.au"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>xinyu.wang@sydney.edu.au</a>
+            <a class="scholar-link" href="https://scholar.google.com/citations?user=goO48UQAAAAJ" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v5c4 3 8 3 12 0v-5M22 9v7"/></svg>Google Scholar <span aria-hidden="true">↗</span></a>
+            <span class="profile-location"><span class="location-dot" aria-hidden="true"></span>Sydney, Australia</span>
+          </div>
         </div>
-      </div>
-      <aside class="profile-note" aria-label="Profile photo and research interests">
         <!-- Replace this source with your portrait, keeping the dimensions and descriptive alt text. -->
         <img class="profile-photo" src="images/profile-placeholder.svg" alt="Profile photo placeholder for Xinyu Wang" width="440" height="520">
-        <span class="profile-label">RESEARCH FOCUS</span>
-        <ul class="focus-list">
-          <li>On-demand ridepooling</li>
-          <li>Reinforcement learning</li>
-          <li>Network optimisation</li>
-          <li>Sustainable transport</li>
-        </ul>
-        <div class="profile-location"><span class="location-dot" aria-hidden="true"></span>Sydney, Australia</div>
-      </aside>
+      </div>
     </section>
 
-    <section id="publications" class="page-section" aria-labelledby="publications-title">
-      <div class="section-heading"><h2 id="publications-title">Publications</h2><span class="section-note">Peer-reviewed journal articles</span></div>
-      <div class="publication-toolbar">
-        <div class="tag-filter" role="group" aria-label="Filter publications by research topic" hidden>
-          <button class="tag-btn active" data-tag="all" aria-pressed="true">All <span class="tag-count">3</span></button>
-          <button class="tag-btn" data-tag="ridepooling" aria-pressed="false">Ridepooling <span class="tag-count">2</span></button>
-          <button class="tag-btn" data-tag="electric-mobility" aria-pressed="false">Electric mobility <span class="tag-count">1</span></button>
-        </div>
-        <p class="author-note">* Corresponding author</p>
-      </div>
-      <p id="filter-status" class="sr-only" role="status" aria-live="polite"></p>
-      <div class="publication-list">
-        <article class="publication" data-tags="ridepooling" aria-labelledby="paper-rl">
-          <figure class="paper-visual"><a href="images/publications/rl-architecture.png" aria-label="View the reinforcement learning architecture figure"><img src="images/publications/rl-architecture.png" alt="A graph neural network encoder connects the ridepooling state to actor and critic networks." width="1152" height="882" loading="lazy" decoding="async"></a><figcaption>GNN actor–critic architecture<span>Wang &amp; Fielbaum, 2026 · Fig. 3</span></figcaption></figure>
-          <div class="paper-content">
-            <div class="paper-meta"><span class="venue-badge">TR Part C</span><span>2026</span></div>
-            <h3 id="paper-rl"><a href="https://doi.org/10.1016/j.trc.2026.105898">RL-based anticipatory routing and matching in on-demand ridepooling</a></h3>
-            <p class="authors"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
-            <p class="journal"><em>Transportation Research Part C: Emerging Technologies</em>, 192, 105898.</p>
-            <p class="paper-summary">A graph neural network actor–critic framework learns how strongly to anticipate future demand when routing and matching shared rides, with cross-city transfer from Manhattan to Utrecht.</p>
-            <div class="paper-links"><a href="https://doi.org/10.1016/j.trc.2026.105898">Paper <span aria-hidden="true">↗</span></a></div>
+    <div class="highlights">
+      <div class="container">
+        <section id="postdoc" class="postdoc" aria-labelledby="postdoc-title">
+          <div class="postdoc-head">
+            <p class="tile-eyebrow"><span class="status-dot" aria-hidden="true"></span>Availability · 2027</p>
+            <h2 id="postdoc-title">Looking for a postdoc.</h2>
           </div>
-        </article>
-        <article class="publication" data-tags="ridepooling" aria-labelledby="paper-walking">
-          <figure class="paper-visual"><a href="images/publications/walking-networks.png" aria-label="View the three-city network figure"><img src="images/publications/walking-networks.png" alt="Street network node hierarchies for Manhattan, Utrecht, and Canberra." width="1278" height="675" loading="lazy" decoding="async"></a><figcaption>Three cities, one framework<span>Wang &amp; Fielbaum, 2026 · Fig. 5</span></figcaption></figure>
-          <div class="paper-content">
-            <div class="paper-meta"><span class="venue-badge">TR Part C</span><span>2026</span></div>
-            <h3 id="paper-walking"><a href="https://doi.org/10.1016/j.trc.2026.105645">Where should the last passenger be dropped off? Anticipatory walking in ridepooling</a></h3>
-            <p class="authors"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
-            <p class="journal"><em>Transportation Research Part C: Emerging Technologies</em>, 187, 105645.</p>
-            <p class="paper-summary">Choosing the last passenger’s drop-off with future trips in mind improves ridepooling service. The method combines sampled future demand with network structure and is evaluated in three cities.</p>
-            <div class="paper-links"><a href="https://doi.org/10.1016/j.trc.2026.105645">Paper <span aria-hidden="true">↗</span></a></div>
+          <div class="postdoc-body">
+            <p>I expect to finish my Ph.D. in mid to late 2027 and am looking for postdoctoral positions in transportation and urban mobility, especially shared and on-demand mobility, reinforcement learning, and optimization for transport systems. If your group works on related problems, I would love to hear from you.</p>
+            <div class="tile-actions">
+              <a class="button button-primary" href="mailto:xinyu.wang@sydney.edu.au">Email me</a>
+              <a class="button button-secondary" href="https://scholar.google.com/citations?user=goO48UQAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
-        </article>
-        <article class="publication" data-tags="electric-mobility" aria-labelledby="paper-ferry">
-          <figure class="paper-visual"><a href="images/publications/ferry-berths.png" aria-label="View the Circular Quay berth layout"><img src="images/publications/ferry-berths.png" alt="Map of Circular Quay ferry berths in Sydney, showing individual berth locations." width="1068" height="540" loading="lazy" decoding="async"></a><figcaption>Berth capacity at Circular Quay<span>Lin et al., 2026 · Fig. 1</span></figcaption></figure>
-          <div class="paper-content">
-            <div class="paper-meta"><span class="venue-badge">Sustainable Cities and Society</span><span>2026</span></div>
-            <h3 id="paper-ferry"><a href="https://doi.org/10.1016/j.scs.2026.107815">Operational challenges of ferry electrification: Scheduling under berth and charging limitations</a></h3>
-            <p class="authors">Lin Lin, Orlando Rivera Letelier, <strong>Xinyu Wang</strong>, Andres Fielbaum*</p>
-            <p class="journal"><em>Sustainable Cities and Society</em>, 149, 107815.</p>
-            <p class="paper-summary">Mixed-integer optimisation examines how charging needs and limited berth capacity affect electric-ferry schedules, using Sydney’s ferry network as a case study.</p>
-            <div class="paper-links"><a href="https://doi.org/10.1016/j.scs.2026.107815">Paper <span aria-hidden="true">↗</span></a></div>
-          </div>
-        </article>
+        </section>
+        <section id="news" class="news" aria-labelledby="news-title">
+          <h2 id="news-title">Latest news</h2>
+          <ol class="news-list">
+            <li><time datetime="2026-10-23">Oct 23, 2026</time><p>Our paper on <a href="https://doi.org/10.1016/j.tra.2026.105326">who should pick the meeting point in ridepooling</a> is published in <em>Transportation Research Part A</em>.</p></li>
+            <li><time datetime="2026-08-22">Aug 22, 2026</time><p>Our paper on <a href="https://doi.org/10.1016/j.scs.2026.107815">ferry electrification</a> is published in <em>Sustainable Cities and Society</em>.</p></li>
+            <li><time datetime="2026-08-12">Aug 12, 2026</time><p>Our paper on <a href="https://doi.org/10.1016/j.trc.2026.105898">RL-based anticipatory routing and matching</a> is published in <em>Transportation Research Part C</em>.</p></li>
+            <li><time datetime="2026-03-25">Mar 25, 2026</time><p>Our paper on <a href="https://doi.org/10.1016/j.trc.2026.105645">anticipatory walking in ridepooling</a> is published in <em>Transportation Research Part C</em>.</p></li>
+          </ol>
+        </section>
       </div>
-    </section>
-
-    <section id="education" class="page-section" aria-labelledby="education-title">
-      <div class="section-heading"><h2 id="education-title">Education</h2></div>
-      <div class="timeline">
-        <article class="timeline-entry">
-          <p class="entry-date">Feb 2024 — Present</p>
-          <div><h3>Ph.D. in Transportation Engineering</h3><p class="entry-place">The University of Sydney · Australia</p><p>School of Civil Engineering, TransportLab. Supervised by Dr. Andres Fielbaum and Prof. David Levinson.</p><p class="entry-detail">Expected completion: mid to late 2027.</p></div>
-        </article>
-        <article class="timeline-entry">
-          <p class="entry-date">Jul 2019 — Jul 2023</p>
-          <div><h3>B.Eng. (Hons) in Information Engineering and Media</h3><p class="entry-place">Nanyang Technological University · Singapore</p><p>School of Electrical and Electronic Engineering.</p><p class="entry-detail">UC Berkeley Summer Session, 2022: CS188 Artificial Intelligence and DATA100 Data Science.</p></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="experience" class="page-section" aria-labelledby="experience-title">
-      <div class="section-heading"><h2 id="experience-title">Experience</h2></div>
-      <div class="timeline">
-        <article class="timeline-entry"><p class="entry-date">Feb 2024 — Present</p><div><h3>Doctoral Researcher</h3><p class="entry-place">TransportLab, The University of Sydney</p><p>AI and operations research for on-demand mobility, with a focus on anticipatory routing, matching, and walking-enabled ridepooling. Since 2024, I have also contributed software and supervision to collaborative research on electric-ferry scheduling.</p></div></article>
-        <article class="timeline-entry"><p class="entry-date">Feb 2025 — Present</p><div><h3>Casual Academic · Tutor and Guest Lecturer</h3><p class="entry-place">The University of Sydney</p><p>Tutor for CIVL2700 Transport Systems (Semester 1, 2025) and guest lecturer for CIVL3704 (Semester 2, 2025), supporting quantitative analysis, computational methods, and Python-based modelling.</p></div></article>
-        <article class="timeline-entry"><p class="entry-date">Jan 2025 — Apr 2025</p><div><h3>Project Management Intern · AI Data</h3><p class="entry-place">TikTok · Sydney, Australia</p><p>Contributed to annotation and training-plan design for a vision-language model supporting video moderation. Developed Python-assisted data validation and coordinated annotation, training, and feedback across more than 20 policy areas.</p></div></article>
-        <article class="timeline-entry"><p class="entry-date">Jul 2023 — Nov 2023</p><div><h3>Project Manager Intern</h3><p class="entry-place">Farfetch · Shanghai, China</p><p>Delivered 5+ agile projects, primarily WeChat Mini-Programme development, for clients including MIDO, Ducati, Harrods, Baccarat, and Off-White. Coordinated requirements, design, engineering, testing, and client feedback, with completed projects generating more than US$100,000 in revenue.</p></div></article>
-        <article class="timeline-entry"><p class="entry-date">Jun 2021 — Jan 2022</p><div><h3>Project Management Intern · Computer Vision Platform</h3><p class="entry-place">SenseTime · Singapore</p><p>Coordinated development and user acceptance testing for a computer-vision platform, translating requirements for baccarat-table supervision into scope, milestones, and validation cycles.</p></div></article>
-        <article class="timeline-entry"><p class="entry-date">Feb 2021 — Jun 2021</p><div><h3>Data Strategist Intern</h3><p class="entry-place">Synthesis · Singapore</p><p>Developed Python models to forecast social-media trends and web crawlers to monitor keyword volumes and content evolution. Analysed high-dimensional textual data and delivered quantitative reports to support client decision-making.</p></div></article>
-        <article class="timeline-entry"><p class="entry-date">Jun 2020 — Jul 2020</p><div><h3>Software Engineer Intern</h3><p class="entry-place">SWS Medical Group · Chongqing, China</p><p>Worked with senior software engineers to improve the interface and operating logic of haemodialysis machines using Go. Collaborated with mechanical engineers to test a new machine model before market launch.</p></div></article>
-      </div>
-    </section>
-
-    <section id="talks" class="page-section" aria-labelledby="talks-title">
-      <div class="section-heading"><h2 id="talks-title">Selected talks &amp; presentations</h2></div>
-      <div class="talk-list">
-        <article class="talk"><span class="talk-year">2026</span><div><h3>World Conference on Transport Research (WCTR)</h3><p>Where should the last passenger be dropped off? Anticipatory walking in ridepooling.</p><p class="entry-detail">Oral presentation · Toulouse, France</p></div></article>
-        <article class="talk"><span class="talk-year">2026</span><div><h3>IEEE ITSS NSW Area Chapter Seminar</h3><p>Anticipatory Methods in On-demand Mobility.</p><p class="entry-detail">Oral presentation · Sydney, Australia</p></div></article>
-        <article class="talk"><span class="talk-year">2025</span><div><h3>12th International Symposium on Travel Demand Management (TDM)</h3><p>Optimizing Passenger Walking at Drop-off with Anticipatory Methods in Ridepooling Systems.</p><p class="entry-detail">Oral presentation · Sydney, Australia</p></div></article>
-        <article class="talk"><span class="talk-year">2025</span><div><h3>Conference on Advanced Systems in Public Transport and TransitData (CASPT)</h3><p>RL-based anticipatory routing and matching in on-demand ridepooling.</p><p class="entry-detail">Poster presentation · Kyoto, Japan</p></div></article>
-      </div>
-    </section>
-
     </div>
-    <aside class="news-sidebar" aria-labelledby="news-title">
-      <section id="news" class="news-panel">
-        <div class="news-heading"><h2 id="news-title">News</h2><span class="news-dot" aria-hidden="true"></span></div>
-        <ol class="news-list">
-          <li><time datetime="2026-08-22">22 AUG 2026</time><p>Our paper on <a href="https://doi.org/10.1016/j.scs.2026.107815">ferry electrification</a> is published in <em>Sustainable Cities and Society</em>.</p></li>
-          <li><time datetime="2026-08-12">12 AUG 2026</time><p>Our paper on <a href="https://doi.org/10.1016/j.trc.2026.105898">RL-based anticipatory routing and matching</a> is published in <em>Transportation Research Part C</em>.</p></li>
-          <li><time datetime="2026-03-25">25 MAR 2026</time><p>Our paper on <a href="https://doi.org/10.1016/j.trc.2026.105645">anticipatory walking in ridepooling</a> is published in <em>Transportation Research Part C</em>.</p></li>
-        </ol>
-      </section>
-    </aside>
+
+    <section id="publications" class="band band-alt" aria-labelledby="publications-title">
+      <div class="container">
+        <h2 id="publications-title" class="headline section-head">Publications. <span>Peer-reviewed journal articles.</span></h2>
+        <div class="publication-toolbar">
+          <div class="tag-filter" role="group" aria-label="Filter publications by research topic" hidden>
+            <button class="tag-btn active" type="button" data-tag="all" aria-pressed="true">All <span class="tag-count">4</span></button>
+            <button class="tag-btn" type="button" data-tag="ridepooling" aria-pressed="false">Ridepooling <span class="tag-count">3</span></button>
+            <button class="tag-btn" type="button" data-tag="electric-mobility" aria-pressed="false">Electric mobility <span class="tag-count">1</span></button>
+          </div>
+          <p class="author-note">* Corresponding author</p>
+        </div>
+        <p id="filter-status" class="sr-only" role="status" aria-live="polite"></p>
+        <div class="publication-list">
+          <article class="publication" data-tags="ridepooling" aria-labelledby="paper-meeting">
+            <figure class="paper-visual"><a href="images/publications/meeting-point-disagreement.jpg" aria-label="View the meeting-point disagreement maps"><img src="images/publications/meeting-point-disagreement.jpg" alt="Two maps of Manhattan colored by how often the operator and the passenger prefer different meeting points: mixed rates at pick-up on the left, mostly high rates at drop-off on the right." width="1088" height="964" loading="lazy"></a><figcaption>Where operator and riders disagree<span>Wang &amp; Fielbaum, 2027 · Fig. 4</span></figcaption></figure>
+            <div class="paper-content">
+              <div class="paper-meta"><span class="venue-badge">TR Part A</span><span>2027</span><span class="new-label">New</span></div>
+              <h3 id="paper-meeting"><a href="https://doi.org/10.1016/j.tra.2026.105326">Who should pick the meeting point? Efficiency–fairness trade-offs between operator and users in ridepooling</a></h3>
+              <p class="authors"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
+              <p class="journal"><em>Transportation Research Part A: Policy and Practice</em>, 215, 105326. Published online October&nbsp;23, 2026.</p>
+              <p class="paper-summary">When the platform and its passengers would pick different meeting points, who should decide? Across Manhattan, Utrecht, and Canberra, operator choice serves more requests, while passenger choice cuts walking per pick-up or drop-off leg roughly threefold. Disagreement is spatially concentrated, more frequent at drop-off, and weighs most on riders least willing to walk.</p>
+              <div class="paper-links"><a href="https://doi.org/10.1016/j.tra.2026.105326">Paper <span aria-hidden="true">↗</span></a><span class="paper-access">Open access</span></div>
+            </div>
+          </article>
+          <article class="publication" data-tags="ridepooling" aria-labelledby="paper-rl">
+            <figure class="paper-visual"><a href="images/publications/rl-architecture.png" aria-label="View the reinforcement learning architecture figure"><img src="images/publications/rl-architecture.png" alt="A graph neural network encoder connects the ridepooling state to actor and critic networks." width="1152" height="882" loading="lazy"></a><figcaption>GNN actor–critic architecture<span>Wang &amp; Fielbaum, 2026 · Fig. 3</span></figcaption></figure>
+            <div class="paper-content">
+              <div class="paper-meta"><span class="venue-badge">TR Part C</span><span>2026</span></div>
+              <h3 id="paper-rl"><a href="https://doi.org/10.1016/j.trc.2026.105898">RL-based anticipatory routing and matching in on-demand ridepooling</a></h3>
+              <p class="authors"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
+              <p class="journal"><em>Transportation Research Part C: Emerging Technologies</em>, 192, 105898.</p>
+              <p class="paper-summary">A graph neural network actor–critic framework learns how strongly to anticipate future demand when routing and matching shared rides, with cross-city transfer from Manhattan to Utrecht.</p>
+              <div class="paper-links"><a href="https://doi.org/10.1016/j.trc.2026.105898">Paper <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="publication" data-tags="ridepooling" aria-labelledby="paper-walking">
+            <figure class="paper-visual"><a href="images/publications/walking-networks.png" aria-label="View the three-city network figure"><img src="images/publications/walking-networks.png" alt="Street network node hierarchies for Manhattan, Utrecht, and Canberra." width="1278" height="675" loading="lazy"></a><figcaption>Three cities, one framework<span>Wang &amp; Fielbaum, 2026 · Fig. 5</span></figcaption></figure>
+            <div class="paper-content">
+              <div class="paper-meta"><span class="venue-badge">TR Part C</span><span>2026</span></div>
+              <h3 id="paper-walking"><a href="https://doi.org/10.1016/j.trc.2026.105645">Where should the last passenger be dropped off? Anticipatory walking in ridepooling</a></h3>
+              <p class="authors"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
+              <p class="journal"><em>Transportation Research Part C: Emerging Technologies</em>, 187, 105645.</p>
+              <p class="paper-summary">Choosing the last passenger’s drop-off with future trips in mind improves ridepooling service. The method combines sampled future demand with network structure and is evaluated in three cities.</p>
+              <div class="paper-links"><a href="https://doi.org/10.1016/j.trc.2026.105645">Paper <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="publication" data-tags="electric-mobility" aria-labelledby="paper-ferry">
+            <figure class="paper-visual"><a href="images/publications/ferry-berths.png" aria-label="View the Circular Quay berth layout"><img src="images/publications/ferry-berths.png" alt="Map of Circular Quay ferry berths in Sydney, showing individual berth locations." width="1068" height="540" loading="lazy"></a><figcaption>Berth capacity at Circular Quay<span>Lin et al., 2026 · Fig. 1</span></figcaption></figure>
+            <div class="paper-content">
+              <div class="paper-meta"><span class="venue-badge">Sustainable Cities and Society</span><span>2026</span></div>
+              <h3 id="paper-ferry"><a href="https://doi.org/10.1016/j.scs.2026.107815">Operational challenges of ferry electrification: Scheduling under berth and charging limitations</a></h3>
+              <p class="authors">Lin Lin, Orlando Rivera Letelier, <strong>Xinyu Wang</strong>, Andres Fielbaum*</p>
+              <p class="journal"><em>Sustainable Cities and Society</em>, 149, 107815.</p>
+              <p class="paper-summary">Mixed-integer optimization examines how charging needs and limited berth capacity affect electric-ferry schedules, using Sydney’s ferry network as a case study.</p>
+              <div class="paper-links"><a href="https://doi.org/10.1016/j.scs.2026.107815">Paper <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="band" aria-labelledby="education-title">
+      <div class="container">
+        <h2 id="education-title" class="headline section-head">Education. <span>From Singapore to Sydney.</span></h2>
+        <div class="timeline">
+          <article class="timeline-entry">
+            <p class="entry-date">Feb 2024 – Present</p>
+            <div class="entry-body"><h3>Ph.D. in Transportation Engineering</h3><p class="entry-place">The University of Sydney · Australia</p><p>School of Civil Engineering, TransportLab. Supervised by Dr. Andres Fielbaum and Prof. David Levinson.</p><p class="entry-detail">Expected completion: mid to late 2027.</p></div>
+          </article>
+          <article class="timeline-entry">
+            <p class="entry-date">Jul 2019 – Jul 2023</p>
+            <div class="entry-body"><h3>B.Eng. (Hons) in Information Engineering and Media</h3><p class="entry-place">Nanyang Technological University · Singapore</p><p>School of Electrical and Electronic Engineering.</p><p class="entry-detail">UC Berkeley Summer Session, 2022: CS188 Artificial Intelligence and DATA100 Data Science.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="band" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 id="experience-title" class="headline section-head">Experience. <span>Research, teaching, and industry.</span></h2>
+        <div class="timeline">
+          <article class="timeline-entry"><p class="entry-date">Feb 2024 – Present</p><div class="entry-body"><h3>Doctoral Researcher</h3><p class="entry-place">TransportLab, The University of Sydney</p><p>AI and operations research for on-demand mobility, with a focus on anticipatory routing, matching, and walking-enabled ridepooling. Since 2024, I have also contributed software and supervision to collaborative research on electric-ferry scheduling.</p></div></article>
+          <article class="timeline-entry"><p class="entry-date">Feb 2025 – Present</p><div class="entry-body"><h3>Casual Academic · Tutor and Guest Lecturer</h3><p class="entry-place">The University of Sydney</p><p>Tutor for CIVL2700 Transport Systems (Semester 1, 2025) and guest lecturer for CIVL3704 (Semester 2, 2025), supporting quantitative analysis, computational methods, and Python-based modeling.</p></div></article>
+          <article class="timeline-entry"><p class="entry-date">Jan 2025 – Apr 2025</p><div class="entry-body"><h3>Project Management Intern · AI Data</h3><p class="entry-place">TikTok · Sydney, Australia</p><p>Contributed to annotation and training-plan design for a vision-language model supporting video moderation. Developed Python-assisted data validation and coordinated annotation, training, and feedback across more than 20 policy areas.</p></div></article>
+          <article class="timeline-entry"><p class="entry-date">Jul 2023 – Nov 2023</p><div class="entry-body"><h3>Project Manager Intern</h3><p class="entry-place">Farfetch · Shanghai, China</p><p>Delivered 5+ agile projects, primarily WeChat Mini Program development, for clients including MIDO, Ducati, Harrods, Baccarat, and Off-White. Coordinated requirements, design, engineering, testing, and client feedback, with completed projects generating more than US$100,000 in revenue.</p></div></article>
+          <article class="timeline-entry"><p class="entry-date">Jun 2021 – Jan 2022</p><div class="entry-body"><h3>Project Management Intern · Computer Vision Platform</h3><p class="entry-place">SenseTime · Singapore</p><p>Coordinated development and user acceptance testing for a computer-vision platform, translating requirements for baccarat-table supervision into scope, milestones, and validation cycles.</p></div></article>
+          <article class="timeline-entry"><p class="entry-date">Feb 2021 – Jun 2021</p><div class="entry-body"><h3>Data Strategist Intern</h3><p class="entry-place">Synthesis · Singapore</p><p>Developed Python models to forecast social-media trends and web crawlers to monitor keyword volumes and content evolution. Analyzed high-dimensional textual data and delivered quantitative reports to support client decision-making.</p></div></article>
+          <article class="timeline-entry"><p class="entry-date">Jun 2020 – Jul 2020</p><div class="entry-body"><h3>Software Engineer Intern</h3><p class="entry-place">SWS Medical Group · Chongqing, China</p><p>Worked with senior software engineers to improve the interface and operating logic of hemodialysis machines using Go. Collaborated with mechanical engineers to test a new machine model before market launch.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="talks" class="band band-alt" aria-labelledby="talks-title">
+      <div class="container">
+        <h2 id="talks-title" class="headline section-head">Talks. <span>Selected talks and presentations.</span></h2>
+        <div class="timeline">
+          <article class="timeline-entry"><p class="entry-date">2026</p><div class="entry-body"><h3>World Conference on Transport Research (WCTR)</h3><p>Where should the last passenger be dropped off? Anticipatory walking in ridepooling.</p><p class="entry-detail">Oral presentation · Toulouse, France</p></div></article>
+          <article class="timeline-entry"><p class="entry-date">2026</p><div class="entry-body"><h3>IEEE ITSS NSW Area Chapter Seminar</h3><p>Anticipatory Methods in On-demand Mobility.</p><p class="entry-detail">Oral presentation · Sydney, Australia</p></div></article>
+          <article class="timeline-entry"><p class="entry-date">2025</p><div class="entry-body"><h3>12th International Symposium on Travel Demand Management (TDM)</h3><p>Optimizing Passenger Walking at Drop-off with Anticipatory Methods in Ridepooling Systems.</p><p class="entry-detail">Oral presentation · Sydney, Australia</p></div></article>
+          <article class="timeline-entry"><p class="entry-date">2025</p><div class="entry-body"><h3>Conference on Advanced Systems in Public Transport and TransitData (CASPT)</h3><p>RL-based anticipatory routing and matching in on-demand ridepooling.</p><p class="entry-detail">Poster presentation · Kyoto, Japan</p></div></article>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="mountain-footer">
-    <picture aria-hidden="true">
-      <source type="image/webp" srcset="images/experience/background-960.webp 960w, images/experience/background-1440.webp 1440w, images/experience/background-1920.webp 1920w" sizes="100vw">
-      <img class="mountain-img" src="images/experience/background.jpeg" alt="" loading="lazy" decoding="async" width="1920" height="1080">
-    </picture>
-    <div class="footer-content"><p class="eyebrow">LET’S CONNECT</p><h2>Research moves forward together.</h2><a class="contact-button" href="mailto:xinyu.wang@sydney.edu.au">Get in touch <span aria-hidden="true">↗</span></a><div class="footer-meta"><span>Xinyu Wang · Sydney, Australia</span><span>Updated September 2026</span><span>Adapted from <a href="https://github.com/w-r-s/academic-homepage-template">Academic Homepage Template</a></span></div></div>
+  <footer class="site-footer">
+    <div class="footer-cta container">
+      <p class="eyebrow">Let’s connect</p>
+      <h2 class="headline">Open to postdoc opportunities from 2027.</h2>
+      <p class="footer-sub">Research moves forward together.</p>
+      <a class="button button-primary" href="mailto:xinyu.wang@sydney.edu.au">Get in touch <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <nav class="footer-links" aria-label="Footer">
+          <a href="#publications">Publications</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#talks">Talks</a>
+          <a href="other-than-academic.html">Other than academic</a>
+          <a href="https://scholar.google.com/citations?user=goO48UQAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        </nav>
+        <div class="footer-meta"><span>Xinyu Wang · Sydney, Australia</span><span>Updated October 2026</span><span>Adapted from <a href="https://github.com/w-r-s/academic-homepage-template">Academic Homepage Template</a></span></div>
+      </div>
+    </div>
   </footer>
-  <a class="back-to-top" href="#about" aria-label="Back to top"><span aria-hidden="true">↑</span></a>
   <div class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

@@ -12,10 +12,6 @@ PUBLIC_FILES = (
     'images/publications/walking-networks.png',
     'images/publications/ferry-berths.png',
     'images/publications/meeting-point-disagreement.jpg',
-    'images/experience/background-960.webp',
-    'images/experience/background-1440.webp',
-    'images/experience/background-1920.webp',
-    'images/experience/background.jpeg',
 )
 IMAGE_SUFFIXES = {'.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif', '.svg'}
 personal_images = tuple(

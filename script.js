@@ -11,7 +11,12 @@ if (header && navToggle) {
     navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   };
   navToggle.addEventListener('click', () => setMenu(!header.classList.contains('nav-open')));
-  header.querySelectorAll('.site-nav a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+  header.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+  // The open menu covers the page, so it closes when focus leaves the header or the layout widens.
+  header.addEventListener('focusout', event => {
+    if (header.classList.contains('nav-open') && event.relatedTarget && !header.contains(event.relatedTarget)) setMenu(false);
+  });
+  window.matchMedia('(min-width: 861px)').addEventListener('change', event => { if (event.matches) setMenu(false); });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && header.classList.contains('nav-open')) {
       setMenu(false);
@@ -54,7 +59,10 @@ function showToast(message) {
   clearTimeout(toastTimer);
   toast.textContent = message;
   toast.classList.add('show');
-  toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
+  toastTimer = setTimeout(() => {
+    toast.classList.remove('show');
+    toast.textContent = '';
+  }, 3200);
 }
 async function copyText(value) {
   if (navigator.clipboard && window.isSecureContext) {
@@ -76,6 +84,8 @@ async function copyText(value) {
 // Keep the mailto link as a no-JavaScript fallback; a normal click copies it.
 document.querySelectorAll('[data-copy-email]').forEach(link => {
   link.setAttribute('role', 'button');
+  link.setAttribute('aria-label', `Copy email address: ${link.textContent.trim()}`);
+  link.title = 'Click to copy email address';
   link.addEventListener('keydown', event => {
     if (event.key === ' ') {
       event.preventDefault();

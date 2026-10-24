@@ -8,12 +8,13 @@ OUTPUT = ROOT / 'dist'
 PUBLIC_FILES = (
     'index.html', 'other-than-academic.html', 'stylesheet.css', 'script.js',
     'images/favicon.svg', 'images/profile-placeholder.svg',
-    'images/publications/rl-architecture.png',
-    'images/publications/walking-networks.png',
-    'images/publications/ferry-berths.png',
-    'images/publications/meeting-point-disagreement.jpg',
 )
 IMAGE_SUFFIXES = {'.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif', '.svg'}
+publication_images = tuple(
+    str(path.relative_to(ROOT))
+    for path in sorted((ROOT / 'images/publications').glob('*'))
+    if path.is_file() and path.suffix.lower() in IMAGE_SUFFIXES
+)
 personal_images = tuple(
     str(path.relative_to(ROOT))
     for path in sorted((ROOT / 'images/personal').rglob('*'))
@@ -24,7 +25,7 @@ profile_images = tuple(
     for path in sorted((ROOT / 'images').glob('profile.*'))
     if path.is_file() and path.suffix.lower() in IMAGE_SUFFIXES
 )
-public_files = PUBLIC_FILES + profile_images + personal_images
+public_files = PUBLIC_FILES + publication_images + profile_images + personal_images
 for filename in public_files:
     if (ROOT / filename).is_symlink():
         raise RuntimeError(f'Public assets must be regular files: {filename}')

@@ -27,11 +27,15 @@ Open http://127.0.0.1:8080. There are no package dependencies. The pages also wo
 </figure>
 ```
 
-The build automatically includes supported images under `images/personal/` and files named `images/profile.*`. Add interest descriptions directly to `other-than-academic.html`.
+The build automatically includes supported images under `images/personal/` and `images/publications/`, and files named `images/profile.*`. Add interest descriptions directly to `other-than-academic.html`.
 
 ## Update content
 
-Edit `index.html` for academic content, News, and the postdoc note (the hero status pill links to `#postdoc`; the footer repeats the message), `other-than-academic.html` for personal content, `stylesheet.css` for presentation (colors, spacing, and type sizes are custom properties at the top), and `script.js` for the mobile menu, publication filters, and email copying. News dates come from the published articles' online-publication dates. When the postdoc search ends, remove the status pill, the `#postdoc` section, and the footer line, and update both `description` meta tags.
+Edit `index.html` for academic content, News, and the postdoc note (the hero status pill links to `#postdoc`; the footer repeats the message), `other-than-academic.html` for personal content, `stylesheet.css` for presentation (colors, radii, fonts, and the main layout measures are custom properties at the top), and `script.js` for the mobile menu, publication filters, and email copying. News dates come from the published articles' online-publication dates. When the postdoc search ends, remove the status pill, the `#postdoc` section, and the footer line, and update both `description` meta tags.
+
+## Add a publication
+
+Copy an existing `<article class="publication">` block in `index.html` and place it in date order (newest first). Save its figure under `images/publications/`; the build picks it up automatically. Give the heading a unique `id` and point the article's `aria-labelledby` at it. Set `data-tags` to the `data-tag` of one or more filter buttons, comma-separated with no spaces (the filter counts update themselves; a new topic needs a new button). Move the "New" label to the newest paper, add a News item, and update the footer's "Updated" month.
 
 ## Publication policy
 

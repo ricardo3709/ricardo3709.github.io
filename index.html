@@ -14,7 +14,7 @@
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="stylesheet.css">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="script.js" defer></script>
+  <script src="script.js" defer onerror="document.documentElement.classList.remove('js')"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -55,7 +55,7 @@
             <li>Sustainable transport</li>
           </ul>
           <div class="contact-links">
-            <a class="email-link" href="mailto:xinyu.wang@sydney.edu.au" data-copy-email title="Click to copy email address" aria-label="Copy email address: xinyu.wang@sydney.edu.au"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>xinyu.wang@sydney.edu.au</a>
+            <a class="email-link" href="mailto:xinyu.wang@sydney.edu.au" data-copy-email><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>xinyu.wang@sydney.edu.au</a>
             <a class="scholar-link" href="https://scholar.google.com/citations?user=goO48UQAAAAJ" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v5c4 3 8 3 12 0v-5M22 9v7"/></svg>Google Scholar <span aria-hidden="true">↗</span></a>
             <span class="profile-location"><span class="location-dot" aria-hidden="true"></span>Sydney, Australia</span>
           </div>
@@ -94,7 +94,7 @@
 
     <section id="publications" class="band band-alt" aria-labelledby="publications-title">
       <div class="container">
-        <h2 id="publications-title" class="headline section-head">Publications. <span>Peer-reviewed journal articles.</span></h2>
+        <h2 id="publications-title" class="headline section-head">Publications. <span><span class="nowrap">Peer-reviewed</span> journal articles.</span></h2>
         <div class="publication-toolbar">
           <div class="tag-filter" role="group" aria-label="Filter publications by research topic" hidden>
             <button class="tag-btn active" type="button" data-tag="all" aria-pressed="true">All <span class="tag-count">4</span></button>
@@ -106,47 +106,47 @@
         <p id="filter-status" class="sr-only" role="status" aria-live="polite"></p>
         <div class="publication-list">
           <article class="publication" data-tags="ridepooling" aria-labelledby="paper-meeting">
-            <figure class="paper-visual"><a href="images/publications/meeting-point-disagreement.jpg" aria-label="View the meeting-point disagreement maps"><img src="images/publications/meeting-point-disagreement.jpg" alt="Two maps of Manhattan colored by how often the operator and the passenger prefer different meeting points: mixed rates at pick-up on the left, mostly high rates at drop-off on the right." width="1088" height="964" loading="lazy"></a><figcaption>Where operator and riders disagree<span>Wang &amp; Fielbaum, 2027 · Fig. 4</span></figcaption></figure>
+            <figure class="paper-visual"><a href="images/publications/meeting-point-disagreement.jpg"><img src="images/publications/meeting-point-disagreement.jpg" alt="Two maps of Manhattan colored by how often the operator and the passenger prefer different meeting points: mixed rates at pick-up on the left, mostly high rates at drop-off on the right." width="1088" height="964" loading="lazy"><span class="sr-only"> (full-size figure)</span></a><figcaption>Where operator and riders disagree<span>Wang &amp; Fielbaum, 2027 · Fig. 4</span></figcaption></figure>
             <div class="paper-content">
               <div class="paper-meta"><span class="venue-badge">TR Part A</span><span>2027</span><span class="new-label">New</span></div>
-              <h3 id="paper-meeting"><a href="https://doi.org/10.1016/j.tra.2026.105326">Who should pick the meeting point? Efficiency–fairness trade-offs between operator and users in ridepooling</a></h3>
+              <h3 id="paper-meeting"><a href="https://doi.org/10.1016/j.tra.2026.105326">Who should pick the meeting point? Efficiency–fairness <span class="nowrap">trade-offs</span> between operator and users in ridepooling</a></h3>
               <p class="authors"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
-              <p class="journal"><em>Transportation Research Part A: Policy and Practice</em>, 215, 105326. Published online October&nbsp;23, 2026.</p>
+              <p class="journal"><em>Transportation Research Part A: Policy and Practice</em>, 215, 105326. Published online October&nbsp;23,&nbsp;2026.</p>
               <p class="paper-summary">When the platform and its passengers would pick different meeting points, who should decide? Across Manhattan, Utrecht, and Canberra, operator choice serves more requests, while passenger choice cuts walking per pick-up or drop-off leg roughly threefold. Disagreement is spatially concentrated, more frequent at drop-off, and weighs most on riders least willing to walk.</p>
               <div class="paper-links"><a href="https://doi.org/10.1016/j.tra.2026.105326">Paper <span aria-hidden="true">↗</span></a><span class="paper-access">Open access</span></div>
             </div>
           </article>
           <article class="publication" data-tags="ridepooling" aria-labelledby="paper-rl">
-            <figure class="paper-visual"><a href="images/publications/rl-architecture.png" aria-label="View the reinforcement learning architecture figure"><img src="images/publications/rl-architecture.png" alt="A graph neural network encoder connects the ridepooling state to actor and critic networks." width="1152" height="882" loading="lazy"></a><figcaption>GNN actor–critic architecture<span>Wang &amp; Fielbaum, 2026 · Fig. 3</span></figcaption></figure>
+            <figure class="paper-visual"><a href="images/publications/rl-architecture.png"><img src="images/publications/rl-architecture.png" alt="A graph neural network encoder connects the ridepooling state to actor and critic networks." width="1152" height="882" loading="lazy"><span class="sr-only"> (full-size figure)</span></a><figcaption>GNN actor–critic architecture<span>Wang &amp; Fielbaum, 2026 · Fig. 3</span></figcaption></figure>
             <div class="paper-content">
               <div class="paper-meta"><span class="venue-badge">TR Part C</span><span>2026</span></div>
-              <h3 id="paper-rl"><a href="https://doi.org/10.1016/j.trc.2026.105898">RL-based anticipatory routing and matching in on-demand ridepooling</a></h3>
+              <h3 id="paper-rl"><a href="https://doi.org/10.1016/j.trc.2026.105898">RL-based anticipatory routing and matching in <span class="nowrap">on-demand</span> ridepooling</a></h3>
               <p class="authors"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
               <p class="journal"><em>Transportation Research Part C: Emerging Technologies</em>, 192, 105898.</p>
               <p class="paper-summary">A graph neural network actor–critic framework learns how strongly to anticipate future demand when routing and matching shared rides, with cross-city transfer from Manhattan to Utrecht.</p>
-              <div class="paper-links"><a href="https://doi.org/10.1016/j.trc.2026.105898">Paper <span aria-hidden="true">↗</span></a></div>
+              <div class="paper-links"><a href="https://doi.org/10.1016/j.trc.2026.105898">Paper <span aria-hidden="true">↗</span></a><span class="paper-access">Open access</span></div>
             </div>
           </article>
           <article class="publication" data-tags="ridepooling" aria-labelledby="paper-walking">
-            <figure class="paper-visual"><a href="images/publications/walking-networks.png" aria-label="View the three-city network figure"><img src="images/publications/walking-networks.png" alt="Street network node hierarchies for Manhattan, Utrecht, and Canberra." width="1278" height="675" loading="lazy"></a><figcaption>Three cities, one framework<span>Wang &amp; Fielbaum, 2026 · Fig. 5</span></figcaption></figure>
+            <figure class="paper-visual"><a href="images/publications/walking-networks.png"><img src="images/publications/walking-networks.png" alt="Street network node hierarchies for Manhattan, Utrecht, and Canberra." width="1278" height="675" loading="lazy"><span class="sr-only"> (full-size figure)</span></a><figcaption>Three cities, one framework<span>Wang &amp; Fielbaum, 2026 · Fig. 5</span></figcaption></figure>
             <div class="paper-content">
               <div class="paper-meta"><span class="venue-badge">TR Part C</span><span>2026</span></div>
               <h3 id="paper-walking"><a href="https://doi.org/10.1016/j.trc.2026.105645">Where should the last passenger be dropped off? Anticipatory walking in ridepooling</a></h3>
               <p class="authors"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
               <p class="journal"><em>Transportation Research Part C: Emerging Technologies</em>, 187, 105645.</p>
               <p class="paper-summary">Choosing the last passenger’s drop-off with future trips in mind improves ridepooling service. The method combines sampled future demand with network structure and is evaluated in three cities.</p>
-              <div class="paper-links"><a href="https://doi.org/10.1016/j.trc.2026.105645">Paper <span aria-hidden="true">↗</span></a></div>
+              <div class="paper-links"><a href="https://doi.org/10.1016/j.trc.2026.105645">Paper <span aria-hidden="true">↗</span></a><span class="paper-access">Open access</span></div>
             </div>
           </article>
           <article class="publication" data-tags="electric-mobility" aria-labelledby="paper-ferry">
-            <figure class="paper-visual"><a href="images/publications/ferry-berths.png" aria-label="View the Circular Quay berth layout"><img src="images/publications/ferry-berths.png" alt="Map of Circular Quay ferry berths in Sydney, showing individual berth locations." width="1068" height="540" loading="lazy"></a><figcaption>Berth capacity at Circular Quay<span>Lin et al., 2026 · Fig. 1</span></figcaption></figure>
+            <figure class="paper-visual"><a href="images/publications/ferry-berths.png"><img src="images/publications/ferry-berths.png" alt="Map of Circular Quay ferry berths in Sydney, showing individual berth locations." width="1068" height="540" loading="lazy"><span class="sr-only"> (full-size figure)</span></a><figcaption>Berth capacity at Circular Quay<span>Lin et al., 2026 · Fig. 1</span></figcaption></figure>
             <div class="paper-content">
               <div class="paper-meta"><span class="venue-badge">Sustainable Cities and Society</span><span>2026</span></div>
               <h3 id="paper-ferry"><a href="https://doi.org/10.1016/j.scs.2026.107815">Operational challenges of ferry electrification: Scheduling under berth and charging limitations</a></h3>
               <p class="authors">Lin Lin, Orlando Rivera Letelier, <strong>Xinyu Wang</strong>, Andres Fielbaum*</p>
               <p class="journal"><em>Sustainable Cities and Society</em>, 149, 107815.</p>
               <p class="paper-summary">Mixed-integer optimization examines how charging needs and limited berth capacity affect electric-ferry schedules, using Sydney’s ferry network as a case study.</p>
-              <div class="paper-links"><a href="https://doi.org/10.1016/j.scs.2026.107815">Paper <span aria-hidden="true">↗</span></a></div>
+              <div class="paper-links"><a href="https://doi.org/10.1016/j.scs.2026.107815">Paper <span aria-hidden="true">↗</span></a><span class="paper-access">Open access</span></div>
             </div>
           </article>
         </div>

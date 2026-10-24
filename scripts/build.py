@@ -11,6 +11,7 @@ PUBLIC_FILES = (
     'images/publications/rl-architecture.png',
     'images/publications/walking-networks.png',
     'images/publications/ferry-berths.png',
+    'images/publications/meeting-point-disagreement.jpg',
     'images/experience/background-960.webp',
     'images/experience/background-1440.webp',
     'images/experience/background-1920.webp',

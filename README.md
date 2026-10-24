@@ -4,7 +4,7 @@
 
 A static personal website for Xinyu Wang, a Ph.D. researcher in Transportation Engineering at the University of Sydney. Adapted from [academic-homepage-template](https://github.com/w-r-s/academic-homepage-template).
 
-The academic homepage includes a biography with a profile-photo placeholder, a postdoc-availability note, News, Google Scholar link, published articles, education, experience, teaching, and talks. The design is a light, Apple-inspired system: system fonts (SF Pro on Apple devices), white and light-gray bands, pill buttons, and a translucent sticky header, with no decorative animation. Clicking the email address copies it. The **Other than academic** page is a photo journal of life outside research.
+The academic homepage includes a biography with a profile photo, a postdoc-availability note, News, Google Scholar link, published articles, education, experience, teaching, and talks. The design is a light, Apple-inspired system: system fonts (SF Pro on Apple devices), white and light-gray bands, pill buttons, and a translucent sticky header, with no decorative animation. Clicking the email address copies it. The **Other than academic** page is a photo journal of life outside research.
 
 ## Preview locally
 

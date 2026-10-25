@@ -62,7 +62,7 @@ function showToast(message) {
   toastTimer = setTimeout(() => {
     toast.classList.remove('show');
     toast.textContent = '';
-  }, 3200);
+  }, 4500);
 }
 async function copyText(value) {
   if (navigator.clipboard && window.isSecureContext) {
@@ -96,6 +96,14 @@ document.querySelectorAll('[data-copy-email]').forEach(link => {
     event.preventDefault();
     const email = link.getAttribute('href').replace(/^mailto:/, '');
     const copied = await copyText(email);
-    showToast(copied ? 'Email address copied.' : 'Could not copy. Please select and copy the email address directly.');
+    showToast(copied ? `Email address copied: ${email}` : `Could not copy. My email address is ${email}`);
+  });
+});
+// Email buttons still open the mail app, and also copy the address in case no mail app is set up.
+document.querySelectorAll('a[href^="mailto:"]:not([data-copy-email])').forEach(link => {
+  link.addEventListener('click', async () => {
+    const email = link.getAttribute('href').replace(/^mailto:/, '');
+    const copied = await copyText(email);
+    showToast(copied ? `Email address copied: ${email}` : `My email address is ${email}`);
   });
 });

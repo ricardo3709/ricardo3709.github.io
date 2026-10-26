@@ -1,5 +1,26 @@
 'use strict';
 
+// Interface text follows the page language; the Chinese pages under zh/ set lang="zh-CN".
+const text = document.documentElement.lang.startsWith('zh') ? {
+  openMenu: '打开菜单',
+  closeMenu: '关闭菜单',
+  showing: count => `显示 ${count} 篇论文。`,
+  copyLabel: email => `复制邮箱地址：${email}`,
+  copyTitle: '点击复制邮箱地址',
+  copied: email => `邮箱地址已复制：${email}`,
+  copyFailed: email => `无法复制。我的邮箱地址是 ${email}`,
+  emailIs: email => `我的邮箱地址是 ${email}`,
+} : {
+  openMenu: 'Open menu',
+  closeMenu: 'Close menu',
+  showing: count => `Showing ${count} ${count === 1 ? 'publication' : 'publications'}.`,
+  copyLabel: email => `Copy email address: ${email}`,
+  copyTitle: 'Click to copy email address',
+  copied: email => `Email address copied: ${email}`,
+  copyFailed: email => `Could not copy. My email address is ${email}`,
+  emailIs: email => `My email address is ${email}`,
+};
+
 // Small-screen menu: the links stay visible as a wrapped row when JavaScript is unavailable.
 const header = document.querySelector('.site-header');
 const navToggle = document.querySelector('.nav-toggle');
@@ -8,7 +29,7 @@ if (header && navToggle) {
     header.classList.toggle('nav-open', open);
     document.documentElement.classList.toggle('menu-open', open);
     navToggle.setAttribute('aria-expanded', String(open));
-    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    navToggle.setAttribute('aria-label', open ? text.closeMenu : text.openMenu);
   };
   navToggle.addEventListener('click', () => setMenu(!header.classList.contains('nav-open')));
   header.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
@@ -48,7 +69,7 @@ if (filter) {
       paper.hidden = tag !== 'all' && !paper.dataset.tags.split(',').includes(tag);
       if (!paper.hidden) count += 1;
     });
-    document.getElementById('filter-status').textContent = `Showing ${count} ${count === 1 ? 'publication' : 'publications'}.`;
+    document.getElementById('filter-status').textContent = text.showing(count);
   });
 }
 
@@ -84,8 +105,8 @@ async function copyText(value) {
 // Keep the mailto link as a no-JavaScript fallback; a normal click copies it.
 document.querySelectorAll('[data-copy-email]').forEach(link => {
   link.setAttribute('role', 'button');
-  link.setAttribute('aria-label', `Copy email address: ${link.textContent.trim()}`);
-  link.title = 'Click to copy email address';
+  link.setAttribute('aria-label', text.copyLabel(link.textContent.trim()));
+  link.title = text.copyTitle;
   link.addEventListener('keydown', event => {
     if (event.key === ' ') {
       event.preventDefault();
@@ -96,7 +117,7 @@ document.querySelectorAll('[data-copy-email]').forEach(link => {
     event.preventDefault();
     const email = link.getAttribute('href').replace(/^mailto:/, '');
     const copied = await copyText(email);
-    showToast(copied ? `Email address copied: ${email}` : `Could not copy. My email address is ${email}`);
+    showToast(copied ? text.copied(email) : text.copyFailed(email));
   });
 });
 // Email buttons still open the mail app, and also copy the address in case no mail app is set up.
@@ -104,6 +125,14 @@ document.querySelectorAll('a[href^="mailto:"]:not([data-copy-email])').forEach(l
   link.addEventListener('click', async () => {
     const email = link.getAttribute('href').replace(/^mailto:/, '');
     const copied = await copyText(email);
-    showToast(copied ? `Email address copied: ${email}` : `My email address is ${email}`);
+    showToast(copied ? text.copied(email) : text.emailIs(email));
+  });
+});
+
+// Both language versions share section ids, so switching language opens the other version at the section in view.
+document.querySelectorAll('.lang-switch a').forEach(link => {
+  link.addEventListener('click', () => {
+    const inView = [...document.querySelectorAll('main section[id]:not(#top)')].filter(section => section.getBoundingClientRect().top <= innerHeight * 0.4).pop();
+    link.hash = inView ? inView.id : '';
   });
 });

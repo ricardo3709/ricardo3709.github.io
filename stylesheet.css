@@ -16,8 +16,9 @@
   --radius-md: 18px;
   --radius-sm: 12px;
   --radius-pill: 980px;
-  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter Display", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-cjk: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC";
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, var(--font-cjk), sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter Display", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, var(--font-cjk), sans-serif;
   --content: 1080px;
   --gutter: 40px;
   --nav-h: 52px;
@@ -45,6 +46,7 @@ a:hover { text-decoration: underline; }
 /* Shared type and controls */
 .headline { font-size: clamp(32px, 4.2vw, 44px); line-height: 1.1; letter-spacing: -.025em; text-wrap: balance; }
 .headline span { color: var(--text-secondary); }
+.headline .nowrap { color: inherit; }
 .eyebrow { margin-bottom: 10px; color: var(--text-secondary); font-size: 17px; font-weight: 600; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 10px 22px; border-radius: var(--radius-pill); font-size: 17px; line-height: 1.2; white-space: nowrap; transition: background-color .15s, color .15s; }
 .button:hover { text-decoration: none; }
@@ -58,7 +60,7 @@ a:hover { text-decoration: underline; }
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, .72); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0, 0, 0, .08); }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .site-header { background: rgba(255, 255, 255, .97); } }
 .nav-bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: var(--nav-h); }
-.wordmark { color: var(--text); font-size: 17px; font-weight: 600; letter-spacing: -.02em; white-space: nowrap; }
+.wordmark { margin-right: auto; color: var(--text); font-size: 17px; font-weight: 600; letter-spacing: -.02em; white-space: nowrap; }
 .wordmark:hover { text-decoration: none; }
 .site-nav { display: flex; align-items: center; gap: 28px; }
 .site-nav a { padding-block: 8px; color: var(--text); opacity: .8; font-size: 14px; transition: opacity .15s; }
@@ -70,6 +72,12 @@ a:hover { text-decoration: underline; }
 .nav-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
 .nav-toggle .icon-close, .nav-open .nav-toggle .icon-menu { display: none; }
 .nav-open .nav-toggle .icon-close { display: block; }
+.lang-switch { display: flex; align-items: center; margin-right: -4px; font-size: 14px; white-space: nowrap; }
+.lang-switch a, .lang-current { padding: 8px 4px; }
+.lang-switch a { color: var(--text-secondary); transition: color .15s; }
+.lang-switch a:hover { color: var(--text); text-decoration: none; }
+.lang-current { color: var(--text); font-weight: 600; }
+.lang-sep { padding-inline: 2px; color: var(--line); }
 
 /* Hero */
 .hero { padding-top: 80px; }
@@ -184,9 +192,15 @@ a:hover { text-decoration: underline; }
 .personal-footer { padding-bottom: 24px; }
 .personal-footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding-top: 18px; border-top: 1px solid var(--line); }
 
+/* Chinese pages: the tight Latin tracking crowds Chinese characters, so only Chinese text drops it;
+   a headline breaks before its gray subtitle rather than inside a word. */
+html :is(body, h2, h3, .hero-lead, .site-nav a, .page-intro h1):lang(zh) { letter-spacing: 0; }
+html:lang(zh) .headline > span { display: inline-block; }
+
 /* Responsive */
 @media (max-width: 1068px) {
   :root { --band-y: 88px; --date-col: 170px; }
+  .site-nav { gap: 20px; }
   .hero-grid { grid-template-columns: minmax(0, 1fr) 240px; gap: 56px; }
   .postdoc { padding: 44px 48px; gap: 20px 40px; }
   .publication { grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 32px; padding: 28px; }
@@ -202,7 +216,7 @@ a:hover { text-decoration: underline; }
   .menu-open body { overflow: hidden; }
   html:not(.js) .site-header { position: static; }
   html:not(.js) .nav-bar { flex-wrap: wrap; padding-block: 12px; }
-  html:not(.js) .site-nav { flex-wrap: wrap; gap: 0 18px; }
+  html:not(.js) .site-nav { order: 1; flex-basis: 100%; flex-wrap: wrap; gap: 0 18px; }
   .hero-grid { grid-template-columns: minmax(0, 1fr) 190px; gap: 40px; }
   .postdoc { grid-template-columns: minmax(0, 1fr); }
   .publication { grid-template-columns: minmax(0, 240px) minmax(0, 1fr); gap: 28px; }

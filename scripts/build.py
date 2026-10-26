@@ -6,7 +6,8 @@ import shutil
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / 'dist'
 PUBLIC_FILES = (
-    'index.html', 'other-than-academic.html', 'stylesheet.css', 'script.js',
+    'index.html', 'other-than-academic.html', 'zh/index.html', 'zh/other-than-academic.html',
+    'stylesheet.css', 'script.js',
     'images/favicon.svg', 'images/profile-placeholder.svg',
 )
 IMAGE_SUFFIXES = {'.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif', '.svg'}

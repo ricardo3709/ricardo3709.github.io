@@ -90,6 +90,7 @@
         <section id="news" class="news" aria-labelledby="news-title">
           <h2 id="news-title">最新动态</h2>
           <ol class="news-list">
+            <li><time datetime="2026-10-30">2026 年 10 月 30 日</time><p>我们关于<a href="https://arxiv.org/abs/2610.41132">平台须向司机公开规则时的网约车再平衡策略</a>的预印本已发布于 <em lang="en">arXiv</em>，研究以自利的大语言模型司机智能体进行检验。</p></li>
             <li><time datetime="2026-10-23">2026 年 10 月 23 日</time><p>我们关于<a href="https://doi.org/10.1016/j.tra.2026.105326">拼车中应由谁选择上下车点</a>的论文发表于 <em lang="en">Transportation Research Part A</em>。</p></li>
             <li><time datetime="2026-08-22">2026 年 8 月 22 日</time><p>我们关于<a href="https://doi.org/10.1016/j.scs.2026.107815">渡轮电动化</a>的论文发表于 <em lang="en">Sustainable Cities and Society</em>。</p></li>
             <li><time datetime="2026-08-12">2026 年 8 月 12 日</time><p>我们关于<a href="https://doi.org/10.1016/j.trc.2026.105898">基于强化学习的前瞻式路径规划与匹配</a>的论文发表于 <em lang="en">Transportation Research Part C</em>。</p></li>
@@ -101,21 +102,33 @@
 
     <section id="publications" class="band band-alt" aria-labelledby="publications-title">
       <div class="container">
-        <h2 id="publications-title" class="headline section-head">论文发表。<span>经同行评审的期刊论文。</span></h2>
+        <h2 id="publications-title" class="headline section-head">论文发表。<span>期刊论文与预印本。</span></h2>
         <div class="publication-toolbar">
           <div class="tag-filter" role="group" aria-label="按研究主题筛选论文" hidden>
-            <button class="tag-btn active" type="button" data-tag="all" aria-pressed="true">全部 <span class="tag-count">4</span></button>
+            <button class="tag-btn active" type="button" data-tag="all" aria-pressed="true">全部 <span class="tag-count">5</span></button>
             <button class="tag-btn" type="button" data-tag="ridepooling" aria-pressed="false">拼车 <span class="tag-count">3</span></button>
             <button class="tag-btn" type="button" data-tag="electric-mobility" aria-pressed="false">电动交通 <span class="tag-count">1</span></button>
+            <button class="tag-btn" type="button" data-tag="ride-hailing" aria-pressed="false">网约车 <span class="tag-count">1</span></button>
           </div>
           <p class="author-note">* 通讯作者</p>
         </div>
         <p id="filter-status" class="sr-only" role="status" aria-live="polite"></p>
         <div class="publication-list">
+          <article class="publication" data-tags="ride-hailing" aria-labelledby="paper-disclosure">
+            <figure class="paper-visual"><a href="../images/publications/llm-driver-moves-profit.png"><img src="../images/publications/llm-driver-moves-profit.png" alt="两幅散点图，横轴为每位大语言模型司机一天内自主移动的次数，纵轴为平台利润的变化。在响应式策略 R 下，利润先升后降，在每位司机约 10 次移动时达到峰值；在前瞻式策略 A 下，司机移动越多，利润越低。" width="1400" height="658" loading="lazy"><span class="sr-only">（查看大图）</span></a><figcaption>司机的移动决定平台利润<span>Wang &amp; Fielbaum，2026 · 图 4</span></figcaption></figure>
+            <div class="paper-content">
+              <div class="paper-meta"><span class="venue-badge">arXiv 预印本</span><span>2026</span><span class="new-label">最新</span></div>
+              <h3 id="paper-disclosure" lang="en"><a href="https://arxiv.org/abs/2610.41132">When Disclosure Is Compulsory: Evaluating <span class="nowrap">Ride-Hailing</span> Rebalancing Policies with <span class="nowrap">Self-Interested</span> LLM Driver Agents</a></h3>
+              <p class="authors" lang="en"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
+              <p class="journal"><span lang="en"><em>arXiv preprint</em> arXiv:2610.41132 [cs.MA]</span>（2026 年 10 月 30 日发布）</p>
+              <p class="paper-summary">欧盟《平台工作指令》要求网约车平台以通俗语言说明其自动化决策规则，司机因此可以把规则交给大语言模型（LLM），由它替自己做决定。本文把每位司机建模为追求自身收入最大化的 LLM 智能体，在三区域模型和曼哈顿中进行评估：规则公开后，司机拒绝平台调度邀约的次数大幅减少。但在曼哈顿，信息公开使响应式再平衡策略的利润下降 3.7%，而前瞻式策略的利润不变；两种在司机完全服从时利润相同的策略，最终相差 6.1%。</p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2610.41132">论文 <span aria-hidden="true">↗</span></a><span class="paper-access">预印本</span></div>
+            </div>
+          </article>
           <article class="publication" data-tags="ridepooling" aria-labelledby="paper-meeting">
             <figure class="paper-visual"><a href="../images/publications/meeting-point-disagreement.jpg"><img src="../images/publications/meeting-point-disagreement.jpg" alt="两幅曼哈顿地图，颜色表示运营方与乘客偏好不同上下车点的频率：左图为上车，各处比例高低不一；右图为下车，大部分区域比例较高。" width="1088" height="964" loading="lazy"><span class="sr-only">（查看大图）</span></a><figcaption>运营方与乘客的分歧所在<span>Wang &amp; Fielbaum，2027 · 图 4</span></figcaption></figure>
             <div class="paper-content">
-              <div class="paper-meta"><span class="venue-badge" lang="en">TR Part A</span><span>2027</span><span class="new-label">最新</span></div>
+              <div class="paper-meta"><span class="venue-badge" lang="en">TR Part A</span><span>2027</span></div>
               <h3 id="paper-meeting" lang="en"><a href="https://doi.org/10.1016/j.tra.2026.105326">Who should pick the meeting point? Efficiency–fairness <span class="nowrap">trade-offs</span> between operator and users in ridepooling</a></h3>
               <p class="authors" lang="en"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
               <p class="journal"><em lang="en">Transportation Research Part A: Policy and Practice</em>, 215, 105326（2026 年 10 月 23 日在线发表）</p>
@@ -221,7 +234,7 @@
           <a href="other-than-academic.html">学术之外</a>
           <a href="https://scholar.google.com/citations?user=goO48UQAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Google 学术</a>
         </nav>
-        <div class="footer-meta"><span>Xinyu Wang · 澳大利亚悉尼</span><span>更新于 2026 年 10 月</span><span>基于 <a href="https://github.com/w-r-s/academic-homepage-template">Academic Homepage Template</a> 修改</span></div>
+        <div class="footer-meta"><span>Xinyu Wang · 澳大利亚悉尼</span><span>更新于 2026 年 11 月</span><span>基于 <a href="https://github.com/w-r-s/academic-homepage-template">Academic Homepage Template</a> 修改</span></div>
       </div>
     </div>
   </footer>

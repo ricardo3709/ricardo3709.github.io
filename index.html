@@ -90,6 +90,7 @@
         <section id="news" class="news" aria-labelledby="news-title">
           <h2 id="news-title">Latest news</h2>
           <ol class="news-list">
+            <li><time datetime="2026-10-30">Oct 30, 2026</time><p>Our new preprint on <a href="https://arxiv.org/abs/2610.41132">ride-hailing rebalancing when platforms must disclose their rules to drivers</a>, tested with self-interested LLM driver agents, is on <em>arXiv</em>.</p></li>
             <li><time datetime="2026-10-23">Oct 23, 2026</time><p>Our paper on <a href="https://doi.org/10.1016/j.tra.2026.105326">who should pick the meeting point in ridepooling</a> is published in <em>Transportation Research Part A</em>.</p></li>
             <li><time datetime="2026-08-22">Aug 22, 2026</time><p>Our paper on <a href="https://doi.org/10.1016/j.scs.2026.107815">ferry electrification</a> is published in <em>Sustainable Cities and Society</em>.</p></li>
             <li><time datetime="2026-08-12">Aug 12, 2026</time><p>Our paper on <a href="https://doi.org/10.1016/j.trc.2026.105898">RL-based anticipatory routing and matching</a> is published in <em>Transportation Research Part C</em>.</p></li>
@@ -101,21 +102,33 @@
 
     <section id="publications" class="band band-alt" aria-labelledby="publications-title">
       <div class="container">
-        <h2 id="publications-title" class="headline section-head">Publications. <span><span class="nowrap">Peer-reviewed</span> journal articles.</span></h2>
+        <h2 id="publications-title" class="headline section-head">Publications. <span><span class="nowrap">Journal articles</span> and preprints.</span></h2>
         <div class="publication-toolbar">
           <div class="tag-filter" role="group" aria-label="Filter publications by research topic" hidden>
-            <button class="tag-btn active" type="button" data-tag="all" aria-pressed="true">All <span class="tag-count">4</span></button>
+            <button class="tag-btn active" type="button" data-tag="all" aria-pressed="true">All <span class="tag-count">5</span></button>
             <button class="tag-btn" type="button" data-tag="ridepooling" aria-pressed="false">Ridepooling <span class="tag-count">3</span></button>
             <button class="tag-btn" type="button" data-tag="electric-mobility" aria-pressed="false">Electric mobility <span class="tag-count">1</span></button>
+            <button class="tag-btn" type="button" data-tag="ride-hailing" aria-pressed="false">Ride-hailing <span class="tag-count">1</span></button>
           </div>
           <p class="author-note">* Corresponding author</p>
         </div>
         <p id="filter-status" class="sr-only" role="status" aria-live="polite"></p>
         <div class="publication-list">
+          <article class="publication" data-tags="ride-hailing" aria-labelledby="paper-disclosure">
+            <figure class="paper-visual"><a href="images/publications/llm-driver-moves-profit.png"><img src="images/publications/llm-driver-moves-profit.png" alt="Two scatter plots of the change in platform profit against how often each LLM driver moved on its own during the day. Under the reactive policy R, profit rises and then falls, peaking at about ten moves per driver; under the anticipatory policy A, it falls steadily as drivers move more." width="1400" height="658" loading="lazy"><span class="sr-only"> (full-size figure)</span></a><figcaption>Driver moves decide platform profit<span>Wang &amp; Fielbaum, 2026 · Fig. 4</span></figcaption></figure>
+            <div class="paper-content">
+              <div class="paper-meta"><span class="venue-badge">arXiv preprint</span><span>2026</span><span class="new-label">New</span></div>
+              <h3 id="paper-disclosure"><a href="https://arxiv.org/abs/2610.41132">When Disclosure Is Compulsory: Evaluating <span class="nowrap">Ride-Hailing</span> Rebalancing Policies with <span class="nowrap">Self-Interested</span> LLM Driver Agents</a></h3>
+              <p class="authors"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
+              <p class="journal"><em>arXiv preprint</em> arXiv:2610.41132 [cs.MA]. Posted October&nbsp;30,&nbsp;2026.</p>
+              <p class="paper-summary">The EU Platform Work Directive requires ride-hailing platforms to explain their automated decisions in plain language, so drivers can hand the rules to an LLM that decides for them. With each driver modeled as an LLM agent maximizing its own income, in a three-zone model and in Manhattan, disclosure makes drivers decline far fewer relocation offers. Yet in Manhattan it costs a reactive rebalancing policy 3.7% of its profit and leaves an anticipatory one unchanged, so two policies that tie under full compliance end 6.1% apart.</p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2610.41132">Paper <span aria-hidden="true">↗</span></a><span class="paper-access">Preprint</span></div>
+            </div>
+          </article>
           <article class="publication" data-tags="ridepooling" aria-labelledby="paper-meeting">
             <figure class="paper-visual"><a href="images/publications/meeting-point-disagreement.jpg"><img src="images/publications/meeting-point-disagreement.jpg" alt="Two maps of Manhattan colored by how often the operator and the passenger prefer different meeting points: mixed rates at pick-up on the left, mostly high rates at drop-off on the right." width="1088" height="964" loading="lazy"><span class="sr-only"> (full-size figure)</span></a><figcaption>Where operator and riders disagree<span>Wang &amp; Fielbaum, 2027 · Fig. 4</span></figcaption></figure>
             <div class="paper-content">
-              <div class="paper-meta"><span class="venue-badge">TR Part A</span><span>2027</span><span class="new-label">New</span></div>
+              <div class="paper-meta"><span class="venue-badge">TR Part A</span><span>2027</span></div>
               <h3 id="paper-meeting"><a href="https://doi.org/10.1016/j.tra.2026.105326">Who should pick the meeting point? Efficiency–fairness <span class="nowrap">trade-offs</span> between operator and users in ridepooling</a></h3>
               <p class="authors"><strong>Xinyu Wang*</strong>, Andres Fielbaum</p>
               <p class="journal"><em>Transportation Research Part A: Policy and Practice</em>, 215, 105326. Published online October&nbsp;23,&nbsp;2026.</p>
@@ -221,7 +234,7 @@
           <a href="other-than-academic.html">Other than academic</a>
           <a href="https://scholar.google.com/citations?user=goO48UQAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
         </nav>
-        <div class="footer-meta"><span>Xinyu Wang · Sydney, Australia</span><span>Updated October 2026</span><span>Adapted from <a href="https://github.com/w-r-s/academic-homepage-template">Academic Homepage Template</a></span></div>
+        <div class="footer-meta"><span>Xinyu Wang · Sydney, Australia</span><span>Updated November 2026</span><span>Adapted from <a href="https://github.com/w-r-s/academic-homepage-template">Academic Homepage Template</a></span></div>
       </div>
     </div>
   </footer>
